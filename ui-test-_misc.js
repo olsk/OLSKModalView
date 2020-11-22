@@ -32,10 +32,6 @@ describe('OLSKModalView_Misc', function () {
 
 	describe('OLSKModalViewCloseButton', function test_OLSKModalViewCloseButton () {
 
-		it('sets data-micromodal-close', function () {
-			browser.assert.attribute(OLSKModalViewCloseButton, 'data-micromodal-close', '');
-		});
-		
 		it('binds OLSKModalViewCloseButton', function () {
 			browser.assert.text('.OLSKStandardViewBody', 'TestOLSKModalViewContent');
 		});

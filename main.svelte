@@ -39,6 +39,12 @@ const mod = {
 		mod._ValueIsVisible = true;
 	},
 
+	ControlClose () {
+		MicroModal.close(mod._DataRandomID);
+
+		mod._ValueIsVisible = false;
+	},
+
 	// LIFECYCLE
 
 	LifecycleModuleDidMount () {
@@ -74,8 +80,10 @@ import OLSKStandardView from 'OLSKStandardView';
 			<OLSKStandardView>
 				<div slot="OLSKStandardViewToolbarHead">
 					<span class="OLSKModalViewTitle" id={ mod._DataRandomTitleID }>{ OLSKModalViewTitleText }</span>
-					<button class="OLSKModalViewCloseButton" data-micromodal-close>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
+
+					<button class="OLSKModalViewCloseButton" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
 				</div>
+
 				<div slot="OLSKStandardViewBody">
 					<slot></slot>
 				</div>
