@@ -138,5 +138,4 @@ import OLSKStandardView from 'OLSKStandardView';
 .OLSKModalView[aria-hidden="true"] .OLSKModalViewContainer {
   animation: slideOut .3s cubic-bezier(0, 0, .2, 1);
 }
-
 </style>
