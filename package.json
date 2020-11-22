@@ -1,0 +1,7 @@
+{
+  "name": "OLSKModalView",
+  "main": "main.svelte",
+  "dependencies": {
+    "OLSKStandardView": "olsk/OLSKStandardView"
+  }
+}
