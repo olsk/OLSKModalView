@@ -16,6 +16,10 @@ describe('OLSKModalView_Misc', function () {
 
 	describe('OLSKModalView', function test_OLSKModalView () {
 
+		it.skip('sets aria-hidden', function () {
+			browser.assert.attribute(OLSKModalView, 'aria-hidden', 'true');
+		});
+		
 		it('binds OLSKModalViewContent', function () {
 			browser.assert.text('.OLSKStandardViewBody', 'TestOLSKModalViewContent');
 		});
