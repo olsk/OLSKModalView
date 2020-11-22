@@ -2,6 +2,7 @@
   "name": "OLSKModalView",
   "main": "main.svelte",
   "dependencies": {
+    "micromodal": "latest",
     "OLSKStandardView": "olsk/OLSKStandardView"
   }
 }
