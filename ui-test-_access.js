@@ -14,16 +14,28 @@ describe('OLSKModalView_Access', function () {
 		return browser.OLSKVisit(kDefaultRoute);
 	});
 
-	it('shows OLSKModalView', function () {
-		browser.assert.elements(OLSKModalView, 1);
+	it('hides OLSKModalView', function () {
+		browser.assert.elements(OLSKModalView, 0);
 	});
 
-	it('shows OLSKStandardView', function () {
-		browser.assert.elements('.OLSKStandardView', 1);
-	});
+	context('Show', function () {
 
-	it('shows OLSKModalViewCloseButton', function () {
-		browser.assert.elements(OLSKModalViewCloseButton, 1);
+		before(function () {
+			return browser.pressButton('#TestShowButton');
+		});
+		
+		it('shows OLSKModalView', function () {
+			browser.assert.elements(OLSKModalView, 1);
+		});
+
+		it('shows OLSKStandardView', function () {
+			browser.assert.elements('.OLSKStandardView', 1);
+		});
+
+		it('shows OLSKModalViewCloseButton', function () {
+			browser.assert.elements(OLSKModalViewCloseButton, 1);
+		});
+	
 	});
 
 });

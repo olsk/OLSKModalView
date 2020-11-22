@@ -6,6 +6,10 @@ describe('OLSKModalView_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute);
 	});
 	
+	before(function () {
+		return browser.pressButton('#TestShowButton');
+	});
+
 	describe('OLSKModalViewContent', function test_OLSKModalViewContent () {
 		
 		it('binds OLSKModalViewContent', function () {
