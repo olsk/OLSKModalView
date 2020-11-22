@@ -33,7 +33,13 @@ const mod = {
 
 	ControlShow () {
 		mod._ValueUpdateCallback = (function () {
-			MicroModal.show(mod._DataRandomID);
+			MicroModal.show(mod._DataRandomID, {
+				onClose () {
+					setTimeout(function () {
+						mod._ValueIsVisible = false;
+					}, 100);
+				},
+			});
 		});
 
 		mod._ValueIsVisible = true;
@@ -41,15 +47,9 @@ const mod = {
 
 	ControlClose () {
 		MicroModal.close(mod._DataRandomID);
-
-		mod._ValueIsVisible = false;
 	},
 
 	// LIFECYCLE
-
-	LifecycleModuleDidMount () {
-		MicroModal.init()
-	},
 
 	LifecycleModuleDidUpdate () {
 		if (!mod._ValueUpdateCallback) {
@@ -62,9 +62,6 @@ const mod = {
 	},
 
 };
-
-import { onMount } from 'svelte';
-onMount(mod.LifecycleModuleDidMount);
 
 import { afterUpdate } from 'svelte';
 afterUpdate(mod.LifecycleModuleDidUpdate);
