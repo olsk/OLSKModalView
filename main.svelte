@@ -7,6 +7,10 @@ export const modPublic = {
 		mod.ControlShow();
 	},
 
+	OLSKModalViewClose () {
+		mod.ControlClose();
+	},
+
 };
 
 import { OLSKLocalized } from 'OLSKInternational';

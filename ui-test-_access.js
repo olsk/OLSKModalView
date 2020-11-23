@@ -20,10 +20,10 @@ describe('OLSKModalView_Access', function () {
 		browser.assert.elements(OLSKModalView, 0);
 	});
 
-	context('Show', function () {
+	context('OLSKModalViewShow', function () {
 
 		before(function () {
-			return browser.pressButton('#TestShowButton');
+			return browser.pressButton('#TestOLSKModalViewShow');
 		});
 		
 		it('shows OLSKModalView', function () {
@@ -44,7 +44,7 @@ describe('OLSKModalView_Access', function () {
 	
 	});
 
-	context('Close', function () {
+	context('OLSKModalViewCloseButton', function () {
 
 		before(function () {
 			return browser.pressButton(OLSKModalViewCloseButton);
@@ -56,14 +56,18 @@ describe('OLSKModalView_Access', function () {
 		
 	});
 
-	context('Close', function () {
+	context('OLSKModalViewClose', function () {
 
 		before(function () {
 			return browser.pressButton('#TestOLSKModalViewShow');
 		});
 
 		before(function () {
-			return browser.pressButton(OLSKModalViewCloseButton);
+			browser.assert.elements(OLSKModalView, 1);
+		});
+
+		before(function () {
+			return browser.pressButton('#TestOLSKModalViewClose');
 		});
 
 		it('hides OLSKModalView', function () {
