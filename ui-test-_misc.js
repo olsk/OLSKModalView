@@ -36,8 +36,12 @@ describe('OLSKModalView_Misc', function () {
 
 	describe('OLSKModalViewCloseButton', function test_OLSKModalViewCloseButton () {
 
-		it('binds OLSKModalViewCloseButton', function () {
-			browser.assert.text('.OLSKStandardViewBody', 'TestOLSKModalViewContent');
+		it('classes OLSKLayoutButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKLayoutButtonNoStyle');
+		});
+
+		it('classes OLSKLayoutElementTappable', function () {
+			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKLayoutElementTappable');
 		});
 
 	});

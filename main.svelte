@@ -81,7 +81,7 @@ import OLSKStandardView from 'OLSKStandardView';
 				<div slot="OLSKStandardViewHead">
 					<span class="OLSKModalViewTitle" id={ mod._DataRandomTitleID }>{ OLSKModalViewTitleText }</span>
 
-					<button class="OLSKModalViewCloseButton" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
+					<button class="OLSKModalViewCloseButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
 				</div>
 
 				<slot></slot>
