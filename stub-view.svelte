@@ -8,7 +8,7 @@ const mod = {
 import OLSKModalView from './main.svelte';
 </script>
 
-<button id="TestShowButton" on:click={ mod._OLSKModalView.modPublic.OLSKModalViewShow() }>Show</button>
+<button id="TestOLSKModalViewShow" on:click={ mod._OLSKModalView.modPublic.OLSKModalViewShow() }>Show</button>
 
 <OLSKModalView bind:this={ mod._OLSKModalView } { ... Object.assign({
 		OLSKModalViewTitleText: Math.random().toString(),

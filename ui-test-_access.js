@@ -56,4 +56,20 @@ describe('OLSKModalView_Access', function () {
 		
 	});
 
+	context('Close', function () {
+
+		before(function () {
+			return browser.pressButton('#TestOLSKModalViewShow');
+		});
+
+		before(function () {
+			return browser.pressButton(OLSKModalViewCloseButton);
+		});
+
+		it('hides OLSKModalView', function () {
+			browser.assert.elements(OLSKModalView, 0);
+		});
+		
+	});
+
 });

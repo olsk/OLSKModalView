@@ -11,7 +11,7 @@ describe('OLSKModalView_Misc', function () {
 	});
 	
 	before(function () {
-		return browser.pressButton('#TestShowButton');
+		return browser.pressButton('#TestOLSKModalViewShow');
 	});
 
 	describe('OLSKModalView', function test_OLSKModalView () {

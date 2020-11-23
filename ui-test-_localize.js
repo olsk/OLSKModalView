@@ -15,7 +15,7 @@ kDefaultRoute.OLSKRouteLanguages.forEach(function (languageCode) {
 		});
 	
 		before(function () {
-			return browser.pressButton('#TestShowButton');
+			return browser.pressButton('#TestOLSKModalViewShow');
 		});
 
 		it('localizes OLSKModalViewCloseButton', function() {
