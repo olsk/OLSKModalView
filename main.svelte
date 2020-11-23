@@ -78,7 +78,7 @@ import OLSKStandardView from 'OLSKStandardView';
 	<div class="OLSKModalViewOverlay" tabindex="-1" data-micromodal-close>
 		<div class="OLSKModalViewContainer" role="dialog" aria-modal="true" aria-labelledby={ mod._DataRandomTitleID }>
 			<OLSKStandardView>
-				<div slot="OLSKStandardViewHead">
+				<div class="OLSKToolbarElementGroup" slot="OLSKStandardViewHead">
 					<span class="OLSKModalViewTitle" id={ mod._DataRandomTitleID }>{ OLSKModalViewTitleText }</span>
 
 					<button class="OLSKModalViewCloseButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
