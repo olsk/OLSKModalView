@@ -41,6 +41,10 @@ describe('OLSKModalView_Access', function () {
 		it('shows OLSKModalViewCloseButton', function () {
 			browser.assert.elements(OLSKModalViewCloseButton, 1);
 		});
+
+		it.skip('hides OLSKStandardViewTail', function () {
+			browser.assert.elements('.OLSKStandardViewTail', 0);
+		});
 	
 	});
 
@@ -74,6 +78,24 @@ describe('OLSKModalView_Access', function () {
 			browser.assert.elements(OLSKModalView, 0);
 		});
 		
+	});
+
+	context('OLSKStandardViewTail', function () {
+		
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				TestOLSKStandardViewTail: true,
+			});
+		});
+
+		before(function () {
+			return browser.pressButton('#TestOLSKModalViewShow');
+		});
+
+		it('shows OLSKStandardViewTail', function () {
+			browser.assert.elements('.OLSKStandardViewTail', 1);
+		});
+	
 	});
 
 });

@@ -78,15 +78,17 @@ import OLSKStandardView from 'OLSKStandardView';
 	<div class="OLSKModalViewOverlay" tabindex="-1" data-micromodal-close>
 		<div class="OLSKModalViewContainer" role="dialog" aria-modal="true" aria-labelledby={ mod._DataRandomTitleID }>
 			<OLSKStandardView>
-				<div slot="OLSKStandardViewToolbarHead">
+				<div slot="OLSKStandardViewHead">
 					<span class="OLSKModalViewTitle" id={ mod._DataRandomTitleID }>{ OLSKModalViewTitleText }</span>
 
 					<button class="OLSKModalViewCloseButton" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
 				</div>
 
-				<div slot="OLSKStandardViewBody">
-					<slot></slot>
-				</div>
+				<slot></slot>
+
+				<div slot="OLSKStandardViewTail" class:OLSKStandardViewTailHotfixHidden={ !$$slots.OLSKStandardViewTail }>{#if $$slots.OLSKStandardViewTail}
+					<slot name="OLSKStandardViewTail"></slot>
+	{/if}</div>
 			</OLSKStandardView>
 	  </div>
 	</div>
@@ -137,5 +139,9 @@ import OLSKStandardView from 'OLSKStandardView';
 
 .OLSKModalView[aria-hidden="true"] .OLSKModalViewContainer {
   animation: slideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.OLSKModalView :global(.OLSKStandardViewTailHotfixHidden) {
+	display: none;
 }
 </style>

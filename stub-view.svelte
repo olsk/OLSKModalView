@@ -3,15 +3,29 @@ const mod = {
 
 	_OLSKModalView: null,
 
+	// DATA
+
+	DataParams () {
+		return Object.assign({
+			OLSKModalViewTitleText: Math.random().toString(),
+		}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).filter(function (e) {
+			return e[0] !== 'TestOLSKStandardViewTail';
+		})));
+	},
+
 };
 
 import OLSKModalView from './main.svelte';
 </script>
 
-<button id="TestOLSKModalViewShow" on:click={ mod._OLSKModalView.modPublic.OLSKModalViewShow() }>Show</button>
+<button id="TestOLSKModalViewShow" on:click={ mod._OLSKModalView.modPublic.OLSKModalViewShow() }>TestOLSKModalViewShow</button>
 
-<button id="TestOLSKModalViewClose" on:click={ mod._OLSKModalView.modPublic.OLSKModalViewClose() }>Show</button>
+<button id="TestOLSKModalViewClose" on:click={ mod._OLSKModalView.modPublic.OLSKModalViewClose() }>TestOLSKModalViewClose</button>
 
-<OLSKModalView bind:this={ mod._OLSKModalView } { ... Object.assign({
-		OLSKModalViewTitleText: Math.random().toString(),
-	}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()))) }>TestOLSKModalViewContent</OLSKModalView>
+{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewTail }
+<OLSKModalView bind:this={ mod._OLSKModalView } { ... mod.DataParams() }>
+	<div slot="OLSKStandardViewTail">TestOLSKModalViewTail</div>
+</OLSKModalView>
+{:else}
+<OLSKModalView bind:this={ mod._OLSKModalView } { ... mod.DataParams() }>TestOLSKModalViewContent</OLSKModalView>
+{/if}
