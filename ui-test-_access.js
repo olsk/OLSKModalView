@@ -3,9 +3,9 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	OLSKModalView: '.OLSKModalView',
 	
-	OLSKModalViewTitle: '.OLSKModalViewTitle',
+	OLSKModalViewTitle: '.OLSKStandardViewHead .OLSKModalViewTitle',
 	
-	OLSKModalViewCloseButton: '.OLSKModalViewCloseButton',
+	OLSKModalViewCloseButton: '.OLSKStandardViewHead .OLSKModalViewCloseButton',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
