@@ -78,10 +78,14 @@ import OLSKStandardView from 'OLSKStandardView';
 	<div class="OLSKModalViewOverlay" tabindex="-1" data-micromodal-close>
 		<div class="OLSKModalViewContainer" role="dialog" aria-modal="true" aria-labelledby={ mod._DataRandomTitleID }>
 			<OLSKStandardView>
-				<div class="OLSKToolbarElementGroup" slot="OLSKStandardViewHead">
-					<span class="OLSKModalViewTitle" id={ mod._DataRandomTitleID }>{ OLSKModalViewTitleText }</span>
+				<div class="OLSKModalViewHead OLSKToolbar OLSKToolbar OLSKToolbarBorderBottom OLSKToolbarJustify" slot="OLSKStandardViewHead">
+					<div class="OLSKToolbarElementGroup">
+						<span class="OLSKModalViewTitle" id={ mod._DataRandomTitleID }>{ OLSKModalViewTitleText }</span>
+					</div>
 
-					<button class="OLSKModalViewCloseButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
+					<div class="OLSKToolbarElementGroup">
+						<button class="OLSKModalViewCloseButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
+					</div>
 				</div>
 
 				<slot></slot>
@@ -153,6 +157,11 @@ import OLSKStandardView from 'OLSKStandardView';
 
 .OLSKModalView[aria-hidden="true"] .OLSKModalViewContainer {
   animation: slideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.OLSKModalViewTitle {
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .OLSKModalView :global(.OLSKStandardViewTailHotfixHidden) {

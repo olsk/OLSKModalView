@@ -34,6 +34,22 @@ describe('OLSKModalView_Misc', function () {
 
 	});
 
+	describe('OLSKModalViewHead', function test_OLSKModalViewHead () {
+
+		it('classes OLSKToolbar', function () {
+			browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbar');
+		});
+
+		it('classes OLSKToolbarJustify', function () {
+			browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbarJustify');
+		});
+
+		it('classes OLSKToolbarBorderBottom', function () {
+			browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbarBorderBottom');
+		});
+
+	});
+
 	describe('OLSKModalViewCloseButton', function test_OLSKModalViewCloseButton () {
 
 		it('classes OLSKLayoutButtonNoStyle', function () {
