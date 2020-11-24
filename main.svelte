@@ -40,7 +40,7 @@ const mod = {
 				onClose () {
 					setTimeout(function () {
 						mod._ValueIsVisible = false;
-					}, 100);
+					}, 600);
 				},
 			});
 		});
@@ -114,13 +114,13 @@ import OLSKStandardView from 'OLSKStandardView';
 }
 
 @keyframes slideIn {
-	from { transform: translateY(15%); }
+	from { transform: translateY(90%); }
 	to { transform: translateY(0); }
 }
 
 @keyframes slideOut {
 	from { transform: translateY(0); }
-	to { transform: translateY(15%); }
+	to { transform: translateY(90%); }
 }
 
 .OLSKModalView {
@@ -150,15 +150,19 @@ import OLSKStandardView from 'OLSKStandardView';
 }
 
 :global(.OLSKModalView[aria-hidden="false"]) .OLSKModalViewContainer {
-  animation: slideIn .3s cubic-bezier(0, 0, .2, 1);
-}
-
-.OLSKModalView[aria-hidden="true"] .OLSKModalViewOverlay {
-  animation: fadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+	opacity: 0;
+  animation: fadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1) .3s, slideIn .3s cubic-bezier(0, 0, 0.2, 1) .3s;
+  animation-fill-mode: forwards;
 }
 
 .OLSKModalView[aria-hidden="true"] .OLSKModalViewContainer {
-  animation: slideOut .3s cubic-bezier(0, 0, .2, 1);
+	animation: fadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1), slideOut .3s cubic-bezier(0, 0, 0.2, 1);
+	animation-fill-mode: forwards;
+}
+
+.OLSKModalView[aria-hidden="true"] .OLSKModalViewOverlay {
+	animation: fadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1) .3s;
+	animation-fill-mode: forwards;
 }
 
 .OLSKModalViewTitle {
