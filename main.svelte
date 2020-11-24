@@ -79,6 +79,8 @@ import OLSKStandardView from 'OLSKStandardView';
 		<div class="OLSKModalViewContainer" role="dialog" aria-modal="true" aria-labelledby={ mod._DataRandomTitleID }>
 			<OLSKStandardView>
 				<div class="OLSKModalViewHead OLSKToolbar OLSKToolbar OLSKToolbarBorderBottom OLSKToolbarJustify" slot="OLSKStandardViewHead">
+					<div class="OLSKToolbarElementGroup">&nbsp;</div>
+
 					<div class="OLSKToolbarElementGroup">
 						<span class="OLSKModalViewTitle" id={ mod._DataRandomTitleID }>{ OLSKModalViewTitleText }</span>
 					</div>
