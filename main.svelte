@@ -183,7 +183,7 @@ import OLSKStandardView from 'OLSKStandardView';
 	}
 
 	:global(.OLSKModalViewCapped) .OLSKModalViewContainer {
-		max-width: 400px;
+		max-width: 450px;
 		max-height: 500px;
 		border: 1px solid black;
 		border-radius: 5px;
