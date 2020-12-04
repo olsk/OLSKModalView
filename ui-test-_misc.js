@@ -3,10 +3,12 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 describe('OLSKModalView_Misc', function () {	
 
 	const OLSKModalViewTitleText = Math.random().toString();
+	const OLSKModalViewIsCapped = uRandomElement(true, false);
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKModalViewTitleText,
+			OLSKModalViewIsCapped,
 		});
 	});
 	
@@ -22,6 +24,14 @@ describe('OLSKModalView_Misc', function () {
 		
 		it('binds OLSKModalViewContent', function () {
 			browser.assert.text('.OLSKStandardViewBody', 'TestOLSKModalViewContent');
+		});
+
+		context('OLSKModalViewIsCapped', function () {
+
+			it('classes OLSKModalViewCapped', function () {
+				OLSKModalViewIsCapped ? browser.assert.hasClass(OLSKModalView, 'OLSKModalViewCapped') : browser.assert.hasNoClass(OLSKModalView, 'OLSKModalViewCapped');
+			});
+		
 		});
 
 	});

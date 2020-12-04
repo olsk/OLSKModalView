@@ -10,6 +10,12 @@ const mod = {
 			OLSKModalViewTitleText: Math.random().toString(),
 		}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).filter(function (e) {
 			return e[0] !== 'TestOLSKStandardViewTail';
+		}).map(function (e) {
+			if (e[0] === 'OLSKModalViewIsCapped') {
+				e[1] = JSON.parse(e[1]);
+			}
+
+			return e;
 		})));
 	},
 

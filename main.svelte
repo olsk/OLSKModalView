@@ -1,5 +1,6 @@
 <script>
 export let OLSKModalViewTitleText;
+export let OLSKModalViewIsCapped = false;
 
 export const modPublic = {
 	
@@ -74,7 +75,7 @@ import OLSKStandardView from 'OLSKStandardView';
 
 {#if mod._ValueIsVisible }
 
-<div class="OLSKModalView" id={ mod._DataRandomID } aria-hidden="true">
+<div class="OLSKModalView" id={ mod._DataRandomID } aria-hidden="true" class:OLSKModalViewCapped={ OLSKModalViewIsCapped }>
 	<div class="OLSKModalViewOverlay" tabindex="-1" data-micromodal-close>
 		<div class="OLSKModalViewContainer" role="dialog" aria-modal="true" aria-labelledby={ mod._DataRandomTitleID }>
 			<OLSKStandardView>
@@ -172,5 +173,29 @@ import OLSKStandardView from 'OLSKStandardView';
 
 .OLSKModalView :global(.OLSKStandardViewTailHotfixHidden) {
 	display: none;
+}
+
+@media (min-width: 450px) {
+	:global(.OLSKModalViewCapped) .OLSKModalViewOverlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	:global(.OLSKModalViewCapped) .OLSKModalViewContainer {
+		max-width: 400px;
+		max-height: 500px;
+		border: 1px solid black;
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+
+		flex: 1;
+	}
+
+	:global(.OLSKModalViewCapped) .OLSKToolbar {
+		--olsktoolbarsize: 24px !important;
+		min-height: 52px !important;
+	}
 }
 </style>
