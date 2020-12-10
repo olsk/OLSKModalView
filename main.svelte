@@ -79,7 +79,7 @@ import OLSKStandardView from 'OLSKStandardView';
 	<div class="OLSKModalViewOverlay" tabindex="-1" data-micromodal-close>
 		<div class="OLSKModalViewContainer" role="dialog" aria-modal="true" aria-labelledby={ mod._DataRandomTitleID }>
 			<OLSKStandardView>
-				<div class="OLSKModalViewHead OLSKToolbar OLSKToolbarBorderBottom OLSKToolbarJustify" slot="OLSKStandardViewHead">
+				<div class="OLSKModalViewHead OLSKToolbar OLSKCommonEdgeBottom OLSKToolbarJustify" slot="OLSKStandardViewHead">
 					<div class="OLSKToolbarElementGroup">&nbsp;</div>
 
 					<div class="OLSKToolbarElementGroup">

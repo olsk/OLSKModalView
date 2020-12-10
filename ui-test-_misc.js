@@ -54,8 +54,8 @@ describe('OLSKModalView_Misc', function () {
 			browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbarJustify');
 		});
 
-		it('classes OLSKToolbarBorderBottom', function () {
-			browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbarBorderBottom');
+		it('classes OLSKCommonEdgeBottom', function () {
+			browser.assert.hasClass(OLSKModalViewHead, 'OLSKCommonEdgeBottom');
 		});
 
 	});
