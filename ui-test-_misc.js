@@ -62,12 +62,12 @@ describe('OLSKModalView_Misc', function () {
 
 	describe('OLSKModalViewCloseButton', function test_OLSKModalViewCloseButton () {
 
-		it('classes OLSKLayoutButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKLayoutButtonNoStyle');
+		it('classes OLSKDecorButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKDecorButtonNoStyle');
 		});
 
-		it('classes OLSKLayoutElementTappable', function () {
-			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKLayoutElementTappable');
+		it('classes OLSKDecorTappable', function () {
+			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKDecorTappable');
 		});
 
 	});
