@@ -194,7 +194,7 @@ import OLSKStandardView from 'OLSKStandardView';
 	}
 
 	:global(.OLSKModalViewCapped) .OLSKToolbar {
-		--olsktoolbarsize: 24px !important;
+		--OLSKToolbarButtonSize: 24px !important;
 		min-height: 52px !important;
 	}
 }
