@@ -126,6 +126,8 @@ import OLSKStandardView from 'OLSKStandardView';
 
 .OLSKModalView {
   display: none;
+
+  z-index: 99999;
 }
 
 .OLSKModalViewOverlay {
@@ -136,6 +138,8 @@ import OLSKStandardView from 'OLSKStandardView';
   bottom: 0;
   
   background: rgba(0,0,0,0.6);
+
+  z-index: 99999;
 }
 
 .OLSKModalViewContainer, .OLSKModalViewContainer > :global(*) {
