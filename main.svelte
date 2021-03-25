@@ -3,6 +3,10 @@ export let OLSKModalViewTitleText;
 export let OLSKModalViewIsCapped = false;
 
 export const modPublic = {
+
+	_OLSKModalViewIsVisible () {
+		return mod._ValueIsVisible;
+	},
 	
 	OLSKModalViewShow () {
 		mod.ControlShow();
