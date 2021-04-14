@@ -183,6 +183,17 @@ import OLSKStandardView from 'OLSKStandardView';
 	display: none;
 }
 
+.OLSKModalView :global(.OLSKStandardView) {
+	background: var(--OLSKCommonBackground);
+	
+	height: 100%;
+	overflow: scroll;
+}
+
+.OLSKModalView :global(.OLSKStandardViewHead) {
+	z-index: 50;
+}
+
 @media (min-width: 450px) {
 	:global(.OLSKModalViewCapped) .OLSKModalViewOverlay {
 		display: flex;
