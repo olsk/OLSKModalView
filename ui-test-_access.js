@@ -7,7 +7,7 @@ Object.entries({
 	OLSKModalViewTitle: '.OLSKModalViewHead .OLSKModalViewTitle',
 	OLSKModalViewCloseButton: '.OLSKModalViewHead .OLSKModalViewCloseButton',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('OLSKModalView_Access', function () {
