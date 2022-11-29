@@ -1,5 +1,6 @@
 <script>
 export let OLSKModalViewTitleText;
+export let OLSKModalViewCloseText = '';
 export let OLSKModalViewIsCapped = false;
 
 export const modPublic = {
@@ -91,7 +92,7 @@ import OLSKStandardView from 'OLSKStandardView';
 					</div>
 
 					<div class="OLSKToolbarElementGroup">
-						<button class="OLSKModalViewCloseButton OLSKDecorButtonNoStyle OLSKDecorTappable" on:click={ mod.ControlClose }>{ OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
+						<button class="OLSKModalViewCloseButton OLSKDecorButtonNoStyle OLSKDecorTappable" on:click={ mod.ControlClose }>{ OLSKModalViewCloseText || OLSKLocalized('OLSKModalViewCloseButtonText') }</button>
 					</div>
 				</div>
 
