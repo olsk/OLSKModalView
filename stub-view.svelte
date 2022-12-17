@@ -8,6 +8,9 @@ const mod = {
 	DataParams () {
 		return Object.assign({
 			OLSKModalViewTitleText: Math.random().toString(),
+			OLSKModalViewDidClose: (function  () {
+				window.TestOLSKModalViewDidClose.innerHTML = parseInt(window.TestOLSKModalViewDidClose.innerHTML) + 1;
+			}),
 		}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).filter(function (e) {
 			return e[0] !== 'TestOLSKStandardViewTail';
 		}).map(function (e) {

@@ -2,6 +2,7 @@
 export let OLSKModalViewTitleText;
 export let OLSKModalViewCloseText = '';
 export let OLSKModalViewIsCapped = false;
+export let OLSKModalViewDidClose = null;
 
 export const modPublic = {
 
@@ -47,6 +48,8 @@ const mod = {
 					setTimeout(function () {
 						mod._ValueIsVisible = false;
 					}, 600);
+
+					OLSKModalViewDidClose && OLSKModalViewDidClose();
 				},
 			});
 		});

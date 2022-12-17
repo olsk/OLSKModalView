@@ -80,6 +80,34 @@ describe('OLSKModalView_Misc', function () {
 			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKDecorTappable');
 		});
 
+		context('click', function () {
+			
+			before(function () {
+				return browser.pressButton(OLSKModalViewCloseButton);
+			});
+
+			it('sends OLSKModalViewDidClose', function () {
+				browser.assert.text('#TestOLSKModalViewDidClose', '1');
+			});
+
+			context('Escape', function () {
+				
+				before(function () {
+					return browser.pressButton('#TestOLSKModalViewShow');
+				});
+
+				before(function () {
+					return browser.OLSKFireKeyboardEvent(browser.window, 'Escape');
+				});
+
+				it.skip('sends OLSKModalViewDidClose', function () {
+					browser.assert.text('#TestOLSKModalViewDidClose', '2');
+				});
+			
+			});
+		
+		});
+
 	});
 	
 });
