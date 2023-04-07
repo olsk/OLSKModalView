@@ -19,7 +19,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		});
 
 		it('localizes OLSKModalViewCloseButton', function() {
-			browser.assert.text(OLSKModalViewCloseButton, uLocalized('OLSKModalViewCloseButtonText'));
+			return browser.assert.text(OLSKModalViewCloseButton, uLocalized('OLSKModalViewCloseButtonText'));
 		});
 	
 	});

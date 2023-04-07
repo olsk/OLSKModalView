@@ -21,17 +21,17 @@ describe('OLSKModalView_Misc', function () {
 	describe('OLSKModalView', function test_OLSKModalView () {
 
 		it.skip('sets aria-hidden', function () {
-			browser.assert.attribute(OLSKModalView, 'aria-hidden', 'true');
+			return browser.assert.attribute(OLSKModalView, 'aria-hidden', 'true');
 		});
 		
 		it('binds OLSKModalViewContent', function () {
-			browser.assert.text('.OLSKStandardViewBody', 'TestOLSKModalViewContent');
+			return browser.assert.text('.OLSKStandardViewBody', 'TestOLSKModalViewContent');
 		});
 
 		context('OLSKModalViewIsCapped', function () {
 
 			it('classes OLSKModalViewCapped', function () {
-				OLSKModalViewIsCapped ? browser.assert.hasClass(OLSKModalView, 'OLSKModalViewCapped') : browser.assert.hasNoClass(OLSKModalView, 'OLSKModalViewCapped');
+				return OLSKModalViewIsCapped ? browser.assert.hasClass(OLSKModalView, 'OLSKModalViewCapped') : browser.assert.hasNoClass(OLSKModalView, 'OLSKModalViewCapped');
 			});
 		
 		});
@@ -41,7 +41,7 @@ describe('OLSKModalView_Misc', function () {
 	describe('OLSKModalViewTitle', function test_OLSKModalViewTitle () {
 
 		it('binds OLSKModalViewTitleText', function () {
-			browser.assert.text(OLSKModalViewTitle, OLSKModalViewTitleText);
+			return browser.assert.text(OLSKModalViewTitle, OLSKModalViewTitleText);
 		});
 
 	});
@@ -49,7 +49,7 @@ describe('OLSKModalView_Misc', function () {
 	describe('OLSKModalViewCloseButton', function test_OLSKModalViewCloseButton () {
 
 		it('binds OLSKModalViewCloseText', function () {
-			browser.assert.text(OLSKModalViewCloseButton, OLSKModalViewCloseText);
+			return browser.assert.text(OLSKModalViewCloseButton, OLSKModalViewCloseText);
 		});
 
 	});
@@ -57,15 +57,15 @@ describe('OLSKModalView_Misc', function () {
 	describe('OLSKModalViewHead', function test_OLSKModalViewHead () {
 
 		it('classes OLSKToolbar', function () {
-			browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbar');
+			return browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbar');
 		});
 
 		it('classes OLSKToolbarJustify', function () {
-			browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbarJustify');
+			return browser.assert.hasClass(OLSKModalViewHead, 'OLSKToolbarJustify');
 		});
 
 		it('classes OLSKCommonEdgeBottom', function () {
-			browser.assert.hasClass(OLSKModalViewHead, 'OLSKCommonEdgeBottom');
+			return browser.assert.hasClass(OLSKModalViewHead, 'OLSKCommonEdgeBottom');
 		});
 
 	});
@@ -73,11 +73,11 @@ describe('OLSKModalView_Misc', function () {
 	describe('OLSKModalViewCloseButton', function test_OLSKModalViewCloseButton () {
 
 		it('classes OLSKDecorButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKDecorButtonNoStyle');
+			return browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKDecorButtonNoStyle');
 		});
 
 		it('classes OLSKDecorTappable', function () {
-			browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKDecorTappable');
+			return browser.assert.hasClass(OLSKModalViewCloseButton, 'OLSKDecorTappable');
 		});
 
 		context('click', function () {
@@ -87,7 +87,7 @@ describe('OLSKModalView_Misc', function () {
 			});
 
 			it('sends OLSKModalViewDidClose', function () {
-				browser.assert.text('#TestOLSKModalViewDidClose', '1');
+				return browser.assert.text('#TestOLSKModalViewDidClose', '1');
 			});
 
 			context('Escape', function () {
@@ -101,7 +101,7 @@ describe('OLSKModalView_Misc', function () {
 				});
 
 				it.skip('sends OLSKModalViewDidClose', function () {
-					browser.assert.text('#TestOLSKModalViewDidClose', '2');
+					return browser.assert.text('#TestOLSKModalViewDidClose', '2');
 				});
 			
 			});

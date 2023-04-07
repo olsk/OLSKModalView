@@ -17,7 +17,7 @@ describe('OLSKModalView_Access', function () {
 	});
 
 	it('hides OLSKModalView', function () {
-		browser.assert.elements(OLSKModalView, 0);
+		return browser.assert.elements(OLSKModalView, 0);
 	});
 
 	context('OLSKModalViewShow', function () {
@@ -27,23 +27,23 @@ describe('OLSKModalView_Access', function () {
 		});
 		
 		it('shows OLSKModalView', function () {
-			browser.assert.elements(OLSKModalView, 1);
+			return browser.assert.elements(OLSKModalView, 1);
 		});
 
 		it('shows OLSKStandardView', function () {
-			browser.assert.elements('.OLSKStandardView', 1);
+			return browser.assert.elements('.OLSKStandardView', 1);
 		});
 
 		it('shows OLSKModalViewTitle', function () {
-			browser.assert.elements(OLSKModalViewTitle, 1);
+			return browser.assert.elements(OLSKModalViewTitle, 1);
 		});
 
 		it('shows OLSKModalViewCloseButton', function () {
-			browser.assert.elements(OLSKModalViewCloseButton, 1);
+			return browser.assert.elements(OLSKModalViewCloseButton, 1);
 		});
 
 		it.skip('hides OLSKStandardViewTail', function () {
-			browser.assert.elements('.OLSKStandardViewTail', 0);
+			return browser.assert.elements('.OLSKStandardViewTail', 0);
 		});
 	
 	});
@@ -55,7 +55,7 @@ describe('OLSKModalView_Access', function () {
 		});
 
 		it('hides OLSKModalView', function () {
-			browser.assert.elements(OLSKModalView, 0);
+			return browser.assert.elements(OLSKModalView, 0);
 		});
 		
 	});
@@ -67,7 +67,7 @@ describe('OLSKModalView_Access', function () {
 		});
 
 		before(function () {
-			browser.assert.elements(OLSKModalView, 1);
+			return browser.assert.elements(OLSKModalView, 1);
 		});
 
 		before(function () {
@@ -75,7 +75,7 @@ describe('OLSKModalView_Access', function () {
 		});
 
 		it('hides OLSKModalView', function () {
-			browser.assert.elements(OLSKModalView, 0);
+			return browser.assert.elements(OLSKModalView, 0);
 		});
 		
 	});
@@ -93,7 +93,7 @@ describe('OLSKModalView_Access', function () {
 		});
 
 		it('shows OLSKStandardViewTail', function () {
-			browser.assert.elements('.OLSKStandardViewTail', 1);
+			return browser.assert.elements('.OLSKStandardViewTail', 1);
 		});
 	
 	});
